@@ -1,0 +1,22 @@
+# Secrets: each person makes their own .env from .env.example. Never upload .env.
+.env
+
+# Local data: uploaded company logos and other per-machine files.
+instance/
+
+# Python's compiled files and the virtual environment (each person creates their own).
+*.pyc
+__pycache__/
+.venv/
+
+# Editor settings (each person keeps their own).
+.vscode/
+
+# Pytest files in case any tests are ran (and others taken from flask-tutorial)
+.pytest_cache/
+.coverage
+htmlcov/
+
+dist/
+build/
+*.egg-info/
