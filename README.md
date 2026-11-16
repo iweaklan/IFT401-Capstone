@@ -58,7 +58,7 @@ Uploaded company logos are saved in `instance/uploads/logos` on the machine runn
    GRANT ALL ON stock_trading.* TO 'stock_app'@'localhost';
    ```
    
-2a. **(OPTIONAL) If you want to delete the database and database user.** In MySQL Workbench, 
+3. **(OPTIONAL) If you want to delete the database and database user.** In MySQL Workbench, 
 	open a query tab and run:
 	
 	```sql
@@ -66,7 +66,7 @@ Uploaded company logos are saved in `instance/uploads/logos` on the machine runn
 	DROP USER IF EXISTS 'stock_app'@'localhost';
 	```
 
-3. **Create your settings file.** Copy `.env.example` to a new file named `.env` and fill it in:
+4. **Create your settings file.** Copy `.env.example` to a new file named `.env` and fill it in:
 
    ```
    DATABASE_URL=mysql://stock_app:your-db-password@localhost:3306/stock_trading
@@ -78,7 +78,7 @@ Uploaded company logos are saved in `instance/uploads/logos` on the machine runn
    If the database password contains `@`, `:` or `/`, write them as `%40`, `%3A`, `%2F`.
    **NEVER** upload `.env` anywhere (it is already listed in `.gitignore`).
 
-4. **Build the tables and load the demo data:**
+5. **Build the tables and load the demo data:**
 
    ```powershell
    flask --app app init-db
