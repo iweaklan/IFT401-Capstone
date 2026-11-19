@@ -126,8 +126,8 @@ accounts start with $0.00, so deposit cash on **Financial Records** before tradi
 `seed.py` has two ready-made schedules and a switch near the top; exactly one line is active:
 
 ```python
-MARKET_SCHEDULE = TEST_SCHEDULE          # <- active: open 24/7
-# MARKET_SCHEDULE = BUSINESS_SCHEDULE    # <- weekdays 9-5, closed Sat/Sun
+# MARKET_SCHEDULE = TEST_SCHEDULE          # <- active: open 24/7
+MARKET_SCHEDULE = BUSINESS_SCHEDULE    # <- weekdays 9-5, closed Sat/Sun
 ```
 
 To switch, comment out the other line, save, then run `flask --app app init-db` (this also

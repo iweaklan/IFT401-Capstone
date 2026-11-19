@@ -12,12 +12,12 @@ from app.clock import now_utc
 # (ticker, company, shares outstanding, starting price). SAGU has only 50 shares and GCNY
 # costs more than $10,000, which makes the error messages easy to demo.
 _SEED_STOCKS = (
-    ("SSOL", "Sonoran Solar Corp", 1000000, Decimal("42.50")),
-    ("DSRT", "Desert Data Systems", 500000, Decimal("128.75")),
-    ("CPTR", "Copper Trail Mining", 250000, Decimal("17.20")),
-    ("MESA", "Mesa Aerospace Inc", 100000, Decimal("310.00")),
-    ("SAGU", "Saguaro Rare Earths", 50, Decimal("5.00")),
-    ("GCNY", "Grand Canyon Holdings", 10000, Decimal("12500.00")),
+    ("MSFT", "Microsoft Corp", 1000000, Decimal("42.50")),
+    ("NVDA", "Nvidia Corp", 500000, Decimal("150.50")),
+    ("AAPL", "Apple Inc", 250000, Decimal("18.60")),
+    ("GOOGL", "Alphabet Cl A", 100000, Decimal("310.00")),
+    ("AMZN", "Amazon.com Inc", 50, Decimal("5.00")),
+    ("AVGO", "Broadcom Ltd", 10000, Decimal("12500.00")),
 )
 
 _WEEKDAYS = (
@@ -39,8 +39,8 @@ BUSINESS_SCHEDULE = {  # weekdays 9:00-17:00, closed Saturday and Sunday
 }
 
 # ------------------------------------------------------------------------
-MARKET_SCHEDULE = TEST_SCHEDULE          # <- active: open 24/7
-# MARKET_SCHEDULE = BUSINESS_SCHEDULE    # <- weekdays 9-5, closed Sat/Sun
+# MARKET_SCHEDULE = TEST_SCHEDULE          # <- active: open 24/7
+MARKET_SCHEDULE = BUSINESS_SCHEDULE    # <- weekdays 9-5, closed Sat/Sun
 # ------------------------------------------------------------------------
 
 def _require_env(name):
